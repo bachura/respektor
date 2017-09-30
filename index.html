@@ -7,11 +7,63 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
 	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css" />
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/formstyler/jquery.formstyler.css">
+	<link rel="stylesheet" href="libs/aos-effects/aos.css">
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
 </head>
 <body>
+
+
+<!-- pop up -->
+	<div align="center" id="pop__up">
+
+		<div id="myfond_gris" opendiv=""></div>
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-8">
+
+			<div id="box_1" class="mymagicoverbox_fenetre">
+				<div class="row">
+					<div class="col-sm-1 col-sm-push-11">
+						<span id="modal_close"></span>	
+					</div>
+				</div>	
+				<div class="row">
+					<div class="feedback">
+						<div class="col-md-8 col-md-push-2">
+							<h4>Задайте вопрос прямо сейчас</h4>
+							<div class="feedback_wrap">
+								<form action="">
+									<input type="text" name="name" placeholder="Имя">
+									<input type="email" name="email" placeholder="Телефон  / Эл. адрес">
+									<select>
+										<option>Выберите тему из списка</option>
+										<option>Тема 1</option>
+										<option>Тема 2</option>
+										<textarea rows="8" placeholder="Коментарии"></textarea>
+									</select>
+									<div class="checkbox">
+										<input type="checkbox">
+										Текст о согласии на обработку персональных данных
+									</div>
+									<button>Отправить заявку</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		</div>
+		</div>
+
+	</div>
+<!-- pop up -->
 
 	<nav class="header">
 		<div class="container">
@@ -24,7 +76,7 @@
 				</ul>
 			</div>
 			<div class="header_right">
-				<a href="#" class="btn">Написать письмо</a>
+				<a href="#" iddiv="box_1" class="mymagicoverbox btn">Написать письмо</a>
 			</div>
 		</div>
 	</nav>
@@ -47,7 +99,7 @@
 		</div>
 	</div>
 
-	<section class="block_main">
+	<section class="block_main" data-aos="fade-up" data-aos-duration="1000">
 		<div class="block_main_text">
 			<h2><span>Тендерное Сопровождение</span><br>Помощь на любом этапе</h2>
 		</div>
@@ -56,21 +108,21 @@
 	<section class="services_icons">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2 col-md-push-2">
+				<div class="col-md-2 col-md-push-2" data-aos="fade-right" data-aos-duration="1000">
 					<img src="img/tender.png" alt="">
 					<p>тендерные услуги</p>
 				</div>
-				<div class="col-md-2 col-md-push-3">
+				<div class="col-md-2 col-md-push-3" data-aos="fade-down" data-aos-duration="1000">
 					<img src="img/legal.png" alt="">
 					<p>юридические услуги</p>
 				</div>
-				<div class="col-md-2 col-md-push-4">
+				<div class="col-md-2 col-md-push-4" data-aos="fade-left" data-aos-duration="1000">
 					<img src="img/accounting.png" alt="">
 					<p>бухгалтерские услуги</p>
 				</div>
 			</div>
 		
-			<div class="about">
+			<div class="about" data-aos="zoom-in" data-aos-duration="1000">
 				<div class="col-md-12">
 					<h3>Компания «Название» – команда профессионалов</h3>
 					<div class="description">
@@ -84,38 +136,37 @@
 		</div>
 	</section>
 
-	<section class="banner">
+	<section class="banner" data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000">
 		<div class="banner_text">
 			<h2>по юридическим услугам</h2>
 		</div>
 	</section>
 
-
 	<section class="why_we">
 		<h3>Пять причин почему лучше выбрать нас</h3>
-		<div class="item">
+		<div class="why_we_item" data-aos="fade-right" data-aos-duration="1000">
 			<div class="why_we_bg_ico"></div>
 			<p>большой опыт судебной работы</p>
 		</div>
-		<div class="item">
+		<div class="why_we_item" data-aos="fade-right" data-aos-duration="1000">
 			<div class="why_we_bg_ico"></div>
 			<p>комплексный подход</p>
 		</div>
-		<div class="item">
+		<div class="why_we_item" data-aos="fade-down" data-aos-duration="1000">
 			<div class="why_we_bg_ico"></div>
 			<p>практикующие адвокаты и юристы</p>
 		</div>
-		<div class="item">
+		<div class="why_we_item" data-aos="fade-left" data-aos-duration="1000">
 			<div class="why_we_bg_ico"></div>
 			<p>высокий процент выигранных дел</p>
 		</div>
-		<div class="item">
+		<div class="why_we_item" data-aos="fade-left" data-aos-duration="1000">
 			<div class="why_we_bg_ico"></div>
 			<p>обширная судебная практика</p>
 		</div>
 	</section>
 
-	<section class="banner banner_tender">
+	<section class="banner banner_tender" data-aos="zoom-out" data-aos-duration="1000">
 		<!-- <div class="container"> -->
 			<div class="banner_title">
 				<h2>Составление техзадания для участия в тендере</h2>
@@ -127,16 +178,32 @@
 	</section>
 
 	<section class="rewievs">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Отзывы наших клиентов</h3>
-				</div>
-			</div>
+		<h3>Отзывы наших клиентов</h3>
+		<div class="rewievs_item">
+			<a href="img/big_rewievs_img.jpg" data-fancybox="images" class="img_link" data-aos="flip-left" data-aos-duration="1000">
+				<img src="img/rewievs_img.jpg" alt="">
+				<div class="rewievs_img_bg"></div>
+				<p class="rewievs_img_title"><i class="fa fa-plus"></i></p>
+			</a>
+			<a href="img/big_rewievs_img.jpg" data-fancybox="images" class="img_link" data-aos="flip-left" data-aos-duration="1000">
+				<img src="img/rewievs_img.jpg" alt="">
+				<div class="rewievs_img_bg"></div>
+				<p class="rewievs_img_title"><i class="fa fa-plus"></i></p>
+			</a>
+			<a href="img/big_rewievs_img.jpg" data-fancybox="images" class="img_link" data-aos="flip-right" data-aos-duration="1000">
+				<img src="img/rewievs_img.jpg" alt="">
+				<div class="rewievs_img_bg"></div>
+				<p class="rewievs_img_title"><i class="fa fa-plus"></i></p>
+			</a>
+			<a href="img/big_rewievs_img.jpg" data-fancybox="images" class="img_link" data-aos="flip-right" data-aos-duration="1000">
+				<img src="img/rewievs_img.jpg" alt="">
+				<div class="rewievs_img_bg"></div>
+				<p class="rewievs_img_title"><i class="fa fa-plus"></i></p>
+			</a>
 		</div>
 	</section>
 
-	<section class="about_video">
+	<section class="about_video" data-aos="zoom-in-down" data-aos-duration="1000">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -149,10 +216,222 @@
 		</div>
 	</section>
 
+	<section class="docs_wrap" data-aos="zoom-in-left" data-aos-duration="1000">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-push-1">
+					<h3>Подготовка заявки на участие в аукционе 44-ФЗ, 223-ФЗ</h3>
+						<div>Наши специалисты правильно подготовят документацию любой сложности по всем видам государственных и коммерческих закупок, проконсультируют по требованиям, установленным к участникам, по комплекту, перечню документов, необходимых для участия в закупке.</div>
+					<div class="description">
+						<img src="img/auction_img_right.png" alt="">
+						<h4>От Вас необходимо:</h4>
+						<div class="docs_wrap_info">Прислать нам информацию об интересующей Вас закупке, в которой планируете участвовать.</div>
+					</div>
+					<div class="description">
+						<img src="img/auction_img_left.png" alt="">
+						<h4>Что делаем мы</h4>
+						<div class="docs_wrap_info">Изучаем документацию на предмет формального соответствия закону, коррумпированности, требований к участникам, выполняемым работам, поставляемым товарам, оказываемым услугам. Выдаём экспертное заключение о целесообразности и перспективе участия в выбранной закупке. Подаём документацию для участия в электронном аукционе с собственного АРМ или удаленно с Вашего АРМ.</div>
+					</div>
+					<div class="description">
+						<h4>На выходе Вы получаете</h4>
+						<div>Грамотно подготовленную документацию, соответствующую всем требованиям заказчика, с минимальными рисками отклонения. Конкретные показатели значений характеристик материалов в полном соответствии с ГОСТ, ТУ производителя, ТЗ Заказчика. Подготовленная нами документация увеличит ваши шансы на победу.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="docs_wrap comlaints" data-aos="zoom-in-right" data-aos-duration="1000">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-push-1">
+					<h3>Подготовка, подача жалобы в ФАС 44-ФЗ, 223-ФЗ</h3>
+					<div>Обращение в УФАС самый быстрый, законный способ восстановить нарушенные права. Оперативное обращение гарантирует грамотную, своевременную подготовку и подачу жалобы в УФАС, с соблюдением законодательства РФ, с учетом практики рассмотрения аналогичных ситуаций по регионам.</div>
+					<div class="description">
+						<img src="img/comlaints_img.png" alt="">
+						<div class="docs_wrap_info">Для получения правильных ответов нужно задавать правильные вопросы. Нельзя допускать, чтобы на отправленный Вами запрос на разъяснение, заказчик мог ответить неоднозначно, двусмысленно, тем самым, по сути не разъяснив положений закупочной документации. Запросы на разъяснение положений закупочной документации дают участнику возможность правильно сформировать и подать заявку на участие в закупке, также дают возможность указать заказчику на необходимость внесения изменений в документацию и продления срока подачи заявок.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="accordion_list" data-aos="fade-up" data-aos-duration="1000">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-push-1">
+					<h3>Список юридическийх услуг</h3>
+					<div class="question">
+						<div class="q_title">
+							<h6>Юридическое обслуживание бизнеса</h6>
+							
+						</div>
+						<div class="answer">
+							<p>Юридическое обслуживание - наиболее технологичный и безопасный способ решения юридических задач Вашего бизнеса. Предлагает Вашему вниманию специальную программу юридического сопровождения бизнеса, предприятий и организаций в Самаре. Мы специализируемся на юридическом аутсорсинге. Наш опыт юридического сопровождения, отработанные технологии взаимодействия и решения разноплановых юридических задач дадут Вам дополнительные конкурентные преимущества. </p>
+						</div>
+					</div>
+					<div class="question">
+						<div class="q_title">
+							<h6>Арбитражные споры любой сложности</h6>
+							<span class="arrow"></span>
+						</div>
+						<div class="answer">
+							<p>Юридическое обслуживание - наиболее технологичный и безопасный способ решения юридических задач Вашего бизнеса. Предлагает Вашему вниманию специальную программу юридического сопровождения бизнеса, предприятий и организаций в Самаре. Мы специализируемся на юридическом аутсорсинге. Наш опыт юридического сопровождения, отработанные технологии взаимодействия и решения разноплановых юридических задач дадут Вам дополнительные конкурентные преимущества. </p>
+						</div>
+					</div>
+					<div class="question">
+						<div class="q_title">
+							<h6>Гражданские споры</h6>
+							<span class="arrow"> <img src="img/arrow.png"> </span>
+						</div>
+						<div class="answer">
+							<p>Юридическое обслуживание - наиболее технологичный и безопасный способ решения юридических задач Вашего бизнеса. Предлагает Вашему вниманию специальную программу юридического сопровождения бизнеса, предприятий и организаций в Самаре. Мы специализируемся на юридическом аутсорсинге. Наш опыт юридического сопровождения, отработанные технологии взаимодействия и решения разноплановых юридических задач дадут Вам дополнительные конкурентные преимущества. </p>
+						</div>
+					</div>
+					<div class="question">
+						<div class="q_title">
+							<h6>Правовое заключение о перспективах дела (письменное, устная консультация, выездная консультация)</h6>
+							<span class="arrow"> <img src="img/arrow.png"> </span>
+						</div>
+						<div class="answer">
+							<p>Юридическое обслуживание - наиболее технологичный и безопасный способ решения юридических задач Вашего бизнеса. Предлагает Вашему вниманию специальную программу юридического сопровождения бизнеса, предприятий и организаций в Самаре. Мы специализируемся на юридическом аутсорсинге. Наш опыт юридического сопровождения, отработанные технологии взаимодействия и решения разноплановых юридических задач дадут Вам дополнительные конкурентные преимущества. </p>
+						</div>
+					</div>
+					<div class="question">
+						<div class="q_title">
+							<h6>Регистрация ООО, ИП, НКО, внесение изменений</h6>
+							<span class="arrow"> <img src="img/arrow.png"> </span>
+						</div>
+						<div class="answer">
+							<p>Юридическое обслуживание - наиболее технологичный и безопасный способ решения юридических задач Вашего бизнеса. Предлагает Вашему вниманию специальную программу юридического сопровождения бизнеса, предприятий и организаций в Самаре. Мы специализируемся на юридическом аутсорсинге. Наш опыт юридического сопровождения, отработанные технологии взаимодействия и решения разноплановых юридических задач дадут Вам дополнительные конкурентные преимущества. </p>
+						</div>
+					</div>
+					<div class="question">
+						<div class="q_title">
+							<h6>Семейные споры (Раздел имущества)</h6>
+							<span class="arrow"> <img src="img/arrow.png"> </span>
+						</div>
+						<div class="answer">
+							<p>Юридическое обслуживание - наиболее технологичный и безопасный способ решения юридических задач Вашего бизнеса. Предлагает Вашему вниманию специальную программу юридического сопровождения бизнеса, предприятий и организаций в Самаре. Мы специализируемся на юридическом аутсорсинге. Наш опыт юридического сопровождения, отработанные технологии взаимодействия и решения разноплановых юридических задач дадут Вам дополнительные конкурентные преимущества. </p>
+						</div>
+					</div>
+					<div class="question">
+						<div class="q_title">
+							<h6>Страховые споры</h6>
+							<span class="arrow"> <img src="img/arrow.png"> </span>
+						</div>
+						<div class="answer">
+							<p>Юридическое обслуживание - наиболее технологичный и безопасный способ решения юридических задач Вашего бизнеса. Предлагает Вашему вниманию специальную программу юридического сопровождения бизнеса, предприятий и организаций в Самаре. Мы специализируемся на юридическом аутсорсинге. Наш опыт юридического сопровождения, отработанные технологии взаимодействия и решения разноплановых юридических задач дадут Вам дополнительные конкурентные преимущества. </p>
+						</div>
+					</div>
+					<div class="question">
+						<div class="q_title">
+							<h6>Земельные споры любой сложности</h6>
+							<span class="arrow"> <img src="img/arrow.png"> </span>
+						</div>
+						<div class="answer">
+							<p>Юридическое обслуживание - наиболее технологичный и безопасный способ решения юридических задач Вашего бизнеса. Предлагает Вашему вниманию специальную программу юридического сопровождения бизнеса, предприятий и организаций в Самаре. Мы специализируемся на юридическом аутсорсинге. Наш опыт юридического сопровождения, отработанные технологии взаимодействия и решения разноплановых юридических задач дадут Вам дополнительные конкурентные преимущества. </p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="info_list" data-aos="zoom-in" data-aos-duration="1000">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-push-1">
+					<h3>Арбитражное рассмотрение экономических споров осуществляется по следующим категориям судебных дел: </h3>
+					<ul>
+						<li>корпоративные споры;</li>
+						<li>конфликты судебного порядка между учредителями и акционерами;</li>
+						<li>вопросы недвижимости, в том числе касательно права собственности на сооружения (здания) и землю;</li>
+						<li>строительные претензии и споры по подряду, договору купли продажи, возврат неосвоенного аванса;</li>
+						<li>арендные разногласия, вопросы лизинга;</li>
+						<li>договорные претензии (признание недействительными, взыскание долгов, расторжение);</li>
+						<li>вексельные споры, в первую очередь касательно взыскания долгов;</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="feedback" data-aos="flip-down" data-aos-duration="1000">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-push-2">
+					<h4>Задайте вопрос прямо сейчас</h4>
+					<div class="feedback_wrap">
+						<form action="">
+							<input type="text" name="name" placeholder="Имя">
+							<input type="email" name="email" placeholder="Телефон  / Эл. адрес">
+							<select>
+								<option>Выберите тему из списка</option>
+								<option>Тема 1</option>
+								<option>Тема 2</option>
+								<textarea rows="8" placeholder="Коментарии"></textarea>
+							</select>
+							<div class="checkbox">
+								<input type="checkbox">
+								Текст о согласии на обработку персональных данных
+							</div>
+							<button>Отправить заявку</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 
 	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="footer_top">
+					<div class="col-md-5">
+						<div class="footer_info">
+							<h3><a href="#">ТЕНДЕРНЫЕ УСЛУГИ</a></h3>
+							<ul>
+								<li><a href="#">комплексное ведение тендеров</a></li>
+								<li><a href="#">подготовка заявки на участие</a></li>
+								<li><a href="#">составление техзадания</a></li>
+								<li><a href="#">подготовка/подача жалобы в ФАС</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="footer_info">
+							<h3><a href="#">ЮРИДИЧЕСКИЕ УСЛУГИ</a></h3>
+							<h3><a href="#">БУХГАЛТЕРСКИЕ УСЛУГИ</a></h3>
+							<h3><a href="#">КОНТАКТЫ</a></h3>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="footer_info footer_contacts">
+							<a href="tel:+388461234567">8(846) 123-45-67</a>
+							<a href="mailto:yuristmgd@mail.ru">yuristmgd@mail.ru</a>
+							<a href="#"  iddiv="box_1" class="mymagicoverbox btn">Написать письмо</a>
+						</div>
+					</div>
+				</div>	
+				<div class="footer_bottom">
+					<div class="col-md-7">
+						Юридическая компания «Респектор». ИП Давыдова Е. А. Тендерное сопровождение, юридичекие и бухгалтерские услуги. Все права защищены, использование материалов с сайта разрешается только с согласия правообладателя.<br>
+						© 2017 г. 
+					</div>
+					<div class="col-md-5">
+						<div class="logo_wrap">
+							<a href="#" class="logo">
+								<img src="img/logo_footer.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>
 	</footer>
 
 	<!--[if lt IE 9]>
@@ -161,10 +440,12 @@
 	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
 	<script src="libs/respond/respond.min.js"></script>
 	<![endif]-->
-	
 	<script src="libs/jquery/jquery.min.js"></script>
 	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
-	<script src="js/common.js"></script>
+	<script src="libs/fancybox/jquery.fancybox.min.js"></script>
+	<script src="libs/formstyler/jquery.formstyler.min.js"></script>
+	<script src="libs/aos-effects/aos.js"></script>
+	<script src="js/main.js"></script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>

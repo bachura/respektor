@@ -20,12 +20,11 @@ html,
 body
 	margin: 0
 	padding: 0
-	height: 100%
 	overflow-x: hidden
 body
 	font-family: "Arimo", sans-serif
 	font-weight: normal
-	font-size: 14px
+	font-size: 16px
 
 textarea,
 input,
@@ -73,7 +72,6 @@ h3
 	font-size: 30px
 	font-weight: 400
 	color: #000
-
 
 /* HEADER NAV */
 .header
@@ -222,28 +220,28 @@ h3
 	text-align: center
 	h3
 		text-align: center
-		padding-bottom: 50px
-.item
-	display: inline-block
-	text-align: center
-	width: 19%
-	vertical-align: top
-	.why_we_bg_ico
+		padding-bottom: 45px
+	&_item
 		display: inline-block
-		width: 150px
-		height: 150px
-		background: rgb(148,194,109) /* Old browsers */
-		background: -moz-linear-gradient(-45deg,  rgba(148,194,109,1) 0%, rgba(95,160,68,1) 100%) /* FF3.6-15 */
-		background: -webkit-linear-gradient(-45deg,  rgba(148,194,109,1) 0%,rgba(95,160,68,1) 100%) /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(135deg,  rgba(148,194,109,1) 0%,rgba(95,160,68,1) 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94c26d', endColorstr='#5fa044',GradientType=1 ) /* IE6-9 fallback on horizontal gradient */
-		border-radius: 600px
-	p
-		padding: 0 12px
-		margin: 25px 0 0 0
-		font-size: 24px
-		font-weight: 400
-		color: #000
+		text-align: center
+		width: 19%
+		vertical-align: top
+		p
+			padding: 0 12px
+			margin: 25px 0 0 0
+			font-size: 24px
+			font-weight: 400
+			color: #000
+.why_we_bg_ico
+	display: inline-block
+	width: 150px
+	height: 150px
+	background: rgb(148,194,109) /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  rgba(148,194,109,1) 0%, rgba(95,160,68,1) 100%) /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  rgba(148,194,109,1) 0%,rgba(95,160,68,1) 100%) /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  rgba(148,194,109,1) 0%,rgba(95,160,68,1) 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94c26d', endColorstr='#5fa044',GradientType=1 ) /* IE6-9 fallback on horizontal gradient */
+	border-radius: 600px
 /* END WHY WY BLOCK */
 
 /* BANNER_TENDER BLOCK */
@@ -278,8 +276,55 @@ h3
 /* END BANNER_2 BLOCK */
 
 /* REWIEVS BLOCK */
+.rewievs
+	max-width: 1280px
+	margin: 0 auto
+	text-align: center
+	h3
+		text-align: center
+		padding-bottom: 45px
+	&_item
+		text-align: center
 
-/* END REWIEVS BLOCK */
+.img_link
+	display: inline-block
+	text-align: center
+	vertical-align: top
+	position: relative
+	margin: 0 20px
+	img
+		width: 100%
+		height: 100%
+		border: 2px solid #8ccc73
+		
+.rewievs_img_bg,
+.rewievs_img_title
+	display: none
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background: rgba(0,93,35,.5)
+
+.img_link:hover
+	.rewievs_img_bg,
+	.rewievs_img_title
+		display: block
+
+.rewievs_img_title
+	background: transparent
+	width: 48px
+	height: 48px
+	border: 5px solid #fff
+	border-radius: 600px
+	font-size: 30px
+	color: #fff
+	font-weight: 200
+	line-height: 40px
+	top: 30%
+	left: 40%
+	/* END REWIEVS BLOCK */
 
 /* ABOUT VIDEO BLOCK */
 .about_video
@@ -291,3 +336,413 @@ h3
 .video_wrap
 	text-align: center
 /* END ABOUT VIDEO BLOCK */
+
+/* DOCS WRAP BLOCK / AUCTION / COMPLAINTS */
+.docs_wrap
+	h3
+		padding-bottom: 40px
+	div
+		color: #000
+	.description
+		margin-top: 40px
+		font-size: 16px
+		color: #000
+		h4
+			text-align: left
+			padding: 0
+			font-size: 24px
+			color: #000
+		img
+			float: left
+			margin: 5px 20px 0 0
+.docs_wrap_info
+	padding-left: 65px
+
+.comlaints
+	background: #d9dbdc
+	background-size: cover
+/* END DOCS WRAP BLOCK / AUCTION / COMPLAINTS */
+
+/* ACCORDION BLOCK */
+.accordion_list
+	h3
+		padding-bottom: 45px
+	h6
+		margin: 0
+		color: #009423
+		font-size: 16px
+		font-weight: 600
+.q_title
+	cursor: pointer
+	position: relative
+	color: #fff
+	border-radius: 600px
+	padding: 12px 15px
+	&:before
+		display: inline-block
+		content: url(../img/accordion_icon.png)
+		width: 46px
+		height: 46px
+		float: right
+		margin-top: -12px
+		margin-right: -17px
+	&.active
+		background: #008e2e
+		h6
+			color: #fff
+			font-size: 16px
+			font-weight: 600
+		&:before
+			display: inline-block
+			content: url(../img/accordion_icon_active.png)
+			width: 46px
+			height: 46px
+			float: right
+			margin-top: -12px
+			margin-right: -17px
+.answer
+	display: none
+	padding: 15px 30px
+	p
+		margin: 0
+		padding: 0
+		font-size: 18px
+.question
+	margin: 0 0 10px 0
+
+.arrow
+	float: right
+	position: absolute
+	top: 25px
+	right: 25px
+/* END ACCORDION BLOCK */
+
+/* INFO LIST BLOCK */
+.info_list
+	background: #aeda9c
+	ul
+		padding: 0 70px
+		li
+			list-style-type: none
+			padding: 5px 45px
+			background: url(../img/list_point_ico.png) 0 10px no-repeat
+			font-size: 16px
+			font-weight: 600
+			color: #000
+/* END INFO LIST BLOCK */
+
+/* FEEDBACK BLOCK */
+.feedback
+	font-size: 18px
+	font-weight: 400
+	color: #000
+	h4
+		text-align: center
+		font-size: 36px
+		font-weight: 600
+		color: #fff
+		padding: 30px 100px
+		margin: 0
+		background: rgb(126,198,115) /* Old browsers */
+		background: -moz-linear-gradient(left,  rgba(126,198,115,1) 0%, rgba(4,143,48,1) 100%) /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  rgba(126,198,115,1) 0%,rgba(4,143,48,1) 100%) /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  rgba(126,198,115,1) 0%,rgba(4,143,48,1) 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ec673', endColorstr='#048f30',GradientType=1 ) /* IE6-9 */
+		border-radius: 100px 100px 0 0
+.feedback_wrap
+	background: #f4f4f4
+	border-radius: 0 0 100px 100px
+	form
+		padding: 25px 75px 45px 75px
+		input
+			width: 100%
+			border: 1px solid #e0e0e0
+			border-radius: 600px
+			color: #000
+			font-size: 18px
+			font-weight: 400
+			padding: 15px 30px
+			margin: 10px 0
+			&::placeholder
+				color: #000
+		.checkbox
+			margin-top: 20px
+		button
+			width: 100%
+			padding: 15px
+			margin-top: 20px
+			background: rgb(135,203,121) /* Old browsers */
+			background: -moz-linear-gradient(left,  rgba(135,203,121,1) 0%, rgba(1,141,46,1) 69%, rgba(1,141,46,1) 69%) /* FF3.6-15 */
+			background: -webkit-linear-gradient(left,  rgba(135,203,121,1) 0%,rgba(1,141,46,1) 69%,rgba(1,141,46,1) 69%) /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right,  rgba(135,203,121,1) 0%,rgba(1,141,46,1) 69%,rgba(1,141,46,1) 69%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87cb79', endColorstr='#018d2e',GradientType=1 ) /* IE6-9 */
+			border: none
+			border-radius: 600px
+			color: #fff
+			font-size: 18px
+			letter-spacing: 1px
+			text-transform: uppercase
+			font-weight: 400
+			&:hover
+				background: #018d2f
+
+
+.jq-selectbox
+	display: inline-block
+	vertical-align: middle
+	width: 100%
+	margin: 0
+	cursor: pointer
+	margin-top: 10px
+	ul
+		margin: 0
+		padding: 0
+		border: 2px solid #bbb
+		border-top: 0
+	li
+		padding: 5px 10px
+		color: #aaa
+		transition: .2s
+		-webkit-transition: .2s
+		&:hover
+			background-color: #ddd
+			color: #777
+	&__select
+		width: 100%
+		padding: 15px 30px
+		background: #fff
+		border: 1px solid #e0e0e0
+		border-radius: 600px
+		color: #000
+		font-size: 18px
+		font-weight: 400
+		position: relative
+		margin: 0
+		&-text
+			font-size: 18px
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			border-top: 12px solid #aaa
+			border-right: 12px solid transparent
+			border-left: 12px solid transparent
+			top: 40%
+			right: 20px
+			transition: .3s
+			-webkit-transition: .3s
+	.jq-selectbox__dropdown
+		width: 94%
+		background: #fff
+		text-align: center
+		right: 17px
+		border: 1px solid #e0e0e0
+		box-shadow: 0 3px 10px 2px rgba(116, 124, 129, 0.2)
+	ul
+		width: 95% !important
+		margin: 0 auto !important
+		border: none !important
+		li
+			color: #000
+			&:hover
+				color: #000
+				background: transparent
+
+.opened .jq-selectbox__select::after
+	transform: scaleY(-1)
+textarea
+	width: 100%
+	border: 1px solid #e0e0e0
+	border-radius: 20px
+	padding: 15px
+	margin-top: 20px
+	font-size: 18px
+	font-weight: 400
+	resize: none
+	&::placeholder
+		color: #000
+
+.jq-checkbox
+	width: 52px
+	height: 52px
+	border-radius: 600px
+	border: 1px solid #e0e0e0
+	background: #fff
+	box-shadow: none
+	padding: 0
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	margin-right: 20px
+
+.jq-checkbox.focused
+	border: 1px solid #d7d7d7
+.jq-checkbox
+	&.checked .jq-checkbox__div
+		width: 20px
+		height: 30px
+		border-radius: 0
+		background: transparent
+		box-shadow: none
+		transform: rotate(45deg)
+		border-right: 4px solid #000
+		border-bottom: 4px solid #000
+		position: absolute
+		top: 7px
+		left: 17px
+	input
+		display: none !important
+
+/* END FEEDBACK BLOCK */
+
+/* FOOTER BLOCK  */
+footer
+	background: #005d23
+	padding: 45px 0
+.footer_info
+	text-align: left
+	h3
+		margin: 0
+		padding: 0
+		text-align: left
+		a
+			font-size: 18px
+			color: #8ccc73
+			text-transform: uppercase
+			text-decoration: underline
+	ul
+		padding: 0
+		margin: 0
+		text-align: left
+		li
+			list-style-type: none
+			padding: 5px 30px
+			background: url(../img/list_point_footer_ico.png) 0 10px no-repeat
+		a
+			font-size: 16px
+			font-weight: 400
+			text-decoration: underline
+			color: #8ccc73
+.footer_contacts
+	text-align: center
+	a
+		display: inline-block
+		font-size: 24px
+		color: #fff
+		font-weight: 400
+		line-height: 35px
+	.btn
+		font-size: 21px
+		padding: 5px 30px
+		margin-top: 45px
+		float: right
+.footer_top
+	display: inline-block
+	border-bottom: 2px solid #8ccc73
+	padding-bottom: 35px
+.footer_bottom
+	padding-top: 35px
+	font-size: 18px
+	color: #fff
+	img
+		max-height: 63px
+		max-width: 100%
+		width: auto
+		height: auto
+		margin: 20px 0
+
+/* END FOOTER BLOCK  */
+
+/* POP UP */
+#modal_close
+	position: absolute
+	right: 100px
+	top: 15px
+	width: 25px
+	height: 25px
+	z-index: 10
+	cursor: pointer
+	&:before, 
+	&:after
+		position: absolute
+		left: 15px
+		content: ' '
+		height: 20px
+		width: 2px
+		background: #018d2e
+	&:before
+		transform: rotate(45deg)
+	&:after
+		transform: rotate(-45deg)
+.mymagicoverbox_fenetre
+	width: 800px
+	left: -400px
+	z-index: 9999
+	position: fixed
+	margin-left: 50%
+	top: 20px
+	text-align: center
+	display: none
+.feedback
+	h4
+		font-size: 20px
+		color: #fff
+	&_wrap
+		border-radius: 0 0 90px 90px
+		form
+			input
+				padding: 5px 15px
+				font-size: 16px
+				&::placeholder
+					font-size: 16px
+			.jq-selectbox__select
+				padding: 5px 15px
+				text-align: left
+				.jq-selectbox__dropdown
+					width: 90%
+			.jq-selectbox__dropdown
+				left: 18px
+				top: 36px
+			.jq-selectbox__select-text
+				font-size: 16px
+			.jq-selectbox__select::after
+				border-top: 9px solid #aaa
+				border-right: 10px solid transparent
+				border-left: 10px solid transparent
+			.jq-checkbox.checked .jq-checkbox__div
+				width: 13px
+				height: 18px
+				top: 5px
+				left: 9px
+			textarea
+				height: 120px
+				font-size: 16px
+				&::placeholder
+					font-size: 16px
+			.jq-checkbox
+				width: 32px
+				height: 32px
+			.checkbox
+				text-align: left
+				font-size: 12px
+			button
+				font-size: 16px
+				padding: 10px
+.mymagicoverbox_fenetreinterieur
+	height: 400px
+	text-align: center
+	overflow: auto
+	margin-top: 10px
+#myfond_gris
+	display: none
+	background-color: #000000
+	opacity: 0.88
+	width: 100%
+	height: 100%
+	z-index: 9998
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+/* END POP UP */
