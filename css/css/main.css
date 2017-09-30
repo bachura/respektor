@@ -1,0 +1,41 @@
+/*
+Error: Invalid CSS after "...=cyrillic-ext')": expected media query list, was ";"
+        on line 2 of C:\Download\WWW\TZ\respektor\css\sass\main.sass
+
+1: @import "bourbon/bourbon"
+2: @import url('https://fonts.googleapis.com/css?family=Arimo:400,700&subset=cyrillic-ext');
+3: 
+4: $bg-text: #000
+5: $light-text: #fff
+6: 
+7: //Убрать стрелки у формы телефона
+
+Backtrace:
+C:\Download\WWW\TZ\respektor\css\sass\main.sass:2
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:74:in `parse_media_query_list'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:1039:in `parse_import_arg'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:998:in `block in parse_import_directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:997:in `loop'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:997:in `parse_import_directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:812:in `parse_directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:646:in `parse_line'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:536:in `build_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:555:in `block in append_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:554:in `each'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:554:in `append_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:409:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:281:in `render'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:400:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:18:in `load'
+C:/Program Files (x86)/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...=cyrillic-ext')\": expected media query list, was \";\"\A         on line 2 of C:\Download\WWW\TZ\respektor\css\sass\main.sass\A \A 1: @import \"bourbon/bourbon\"\A 2: @import url('https://fonts.googleapis.com/css?family=Arimo:400,700&subset=cyrillic-ext');\A 3: \A 4: $bg-text: #000\A 5: $light-text: #fff\A 6: \A 7: //Убрать стрелки у формы телефона"; }
