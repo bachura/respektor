@@ -1,6 +1,19 @@
 $(document).ready(function() {
 
-	// fancybox
+	// Adaptive menu
+	$('.menu-btn').on('click', function () {
+		if ($(this).parents('.menu_wrap').is('.opened-menu') !== true) {
+			$('.menu_wrap').addClass('opened-menu');
+			$('#main-menu').addClass('opened');
+
+		}
+		else if ($(this).parents('.menu_wrap').is('.opened-menu') === true) {
+			$('.menu_wrap').removeClass('opened-menu');
+			$('#main-menu').removeClass('opened');
+		}
+	});
+
+	// Fancybox
 	$('[data-fancybox]').fancybox({
 		autoSize: true,
 		protect: true
@@ -20,7 +33,7 @@ $(document).ready(function() {
 		}
 	})
 
-	// formstyler.min.js 
+	// Formstyler 
 	  $('input[type="radio"], input[type="checkbox"], input[type="file"], select').styler();
 
 	// Pop_up form
@@ -40,11 +53,14 @@ $(document).ready(function() {
 				$('#'+iddiv).fadeOut(300);
 	});
 
-	// viewport_checker
-	 AOS.init({
-	 	disable: 'mobile',
-    easing: 'ease',
-    delay: 50,
-	 });
+	// AOS effects
+	AOS.init({
+		disable: function () {
+    		var maxWidth = 991;
+		    return window.innerWidth < maxWidth;
+			  },
+		easing: 'ease',
+		delay: 50,
+	});
 
 }); 
