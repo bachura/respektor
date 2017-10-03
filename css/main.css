@@ -16,8 +16,7 @@ button::-moz-focus-inner {
 html,
 body {
   margin: 0;
-  padding: 0;
-  overflow-x: hidden; }
+  padding: 0; }
 
 body {
   font-family: "Arimo", sans-serif;
@@ -37,7 +36,7 @@ section {
   padding: 60px 0; }
 
 .btn {
-  background: #009524;
+  background: transparent;
   color: #fff;
   display: inline-block;
   vertical-align: middle;
@@ -54,7 +53,7 @@ section {
   -webkit-transition: 0.3s; }
 
 .btn:hover {
-  background: #a0ca77;
+  background: #009524;
   color: #fff; }
 
 h2 {
@@ -194,56 +193,60 @@ h3 {
     text-align: left; }
 
 .menu-btn {
-  height: 35px;
-  width: 40px;
+  height: 42px;
+  width: 42px;
   padding: 0 5px;
   position: absolute;
   right: -60px;
   top: 22px;
   cursor: pointer;
   z-index: 100 !important;
-  background: rgba(255, 255, 255, 0.5); }
+  border: 3px solid #a0ca77;
+  border-radius: 600px; }
 
 .opened .menu-btn {
   right: 0;
-  top: 23px; }
+  top: 23px;
+  border: none; }
 
 .menu-btn-line {
   height: 3px;
-  background: #009524;
+  background: #fff;
   position: absolute; }
 
 .menu-btn-line-1 {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  width: 30px;
-  top: 5px; }
+  width: 26px;
+  top: 7px; }
 
 .menu-btn-line-2 {
-  top: 15px;
-  width: 30px;
+  top: 17px;
+  width: 26px;
   left: 5px; }
 
 .menu-btn-line-3 {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  width: 30px;
-  top: 25px; }
+  width: 26px;
+  top: 27px; }
 
+.opened-menu .menu-btn-line {
+  background: #009524; }
 .opened-menu .menu-btn-line-1 {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   width: 15px;
-  top: 11px; }
+  top: 15px; }
 .opened-menu .menu-btn-line-2 {
-  top: 15px;
+  top: 19px;
   width: 0px;
   left: 9px; }
 .opened-menu .menu-btn-line-3 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   width: 15px;
-  top: 20px; }
+  top: 24px; }
 
 /* END ADAPTIVE MENU */
 /* TITLE BLOCK */
@@ -286,6 +289,8 @@ h3 {
     font-size: 24px;
     color: #005d23;
     text-decoration: underline; }
+    .contacts_wrap a:hover {
+      color: #009524; }
 
 @media (max-width: 1200px) {
   .logo img {
@@ -423,7 +428,7 @@ h3 {
     padding: 15px 0; }
     .why_we_item p {
       font-size: 16px;
-      padding: 0;
+      padding: 0 20px;
       margin: 0; } }
 @media (max-width: 767px) {
   .why_we_item {
@@ -478,7 +483,8 @@ h3 {
   .banner_tender .banner_info {
     width: 100%;
     display: block;
-    text-align: center; }
+    text-align: center;
+    padding-top: 120px; }
 
   .banner_tender .banner_title h2 {
     width: 100%;
@@ -486,7 +492,8 @@ h3 {
     color: #fff;
     text-align: center;
     left: 0;
-    padding: 0 15px; } }
+    padding: 0 15px;
+    top: 20px; } }
 @media (max-width: 480px) {
   .banner_tender .banner_info {
     font-size: 16px; }
@@ -512,7 +519,7 @@ h3 {
   position: relative;
   margin: 0 20px; }
   .img_link img {
-    width: 100%;
+    width: auto;
     height: 100%;
     border: 2px solid #8ccc73; }
 
@@ -641,7 +648,7 @@ h3 {
       height: 46px;
       float: right;
       margin-top: -12px;
-      margin-right: -17px; }
+      margin-right: -15px; }
 
 .answer {
   display: none;
@@ -717,7 +724,7 @@ h3 {
   .feedback h4 {
     text-align: center;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 400;
     color: #fff;
     padding: 30px 100px;
     margin: 0;
@@ -748,7 +755,7 @@ h3 {
       .feedback_wrap form input::placeholder {
         color: #000; }
     .feedback_wrap form .checkbox {
-      margin-top: 20px; }
+      margin-top: 15px; }
     .feedback_wrap form button {
       width: 100%;
       padding: 15px;
@@ -843,11 +850,14 @@ textarea {
   font-weight: 400;
   resize: none; }
   textarea::-webkit-input-placeholder {
-    color: #000; }
+    color: #000;
+    padding: 5px 15px; }
   textarea:-ms-input-placeholder {
-    color: #000; }
+    color: #000;
+    padding: 5px 15px; }
   textarea::placeholder {
-    color: #000; }
+    color: #000;
+    padding: 5px 15px; }
 
 .jq-checkbox {
   width: 52px;
@@ -883,9 +893,105 @@ textarea {
 .jq-checkbox input {
   display: none !important; }
 
-@media (max-width: 767px) {
+.jq-checkbox.checked .jq-checkbox__div {
+  width: 14px;
+  height: 20px;
+  top: 7px;
+  left: 12px; }
+
+.jq-checkbox {
+  width: 40px;
+  height: 40px;
+  float: left; }
+
+.checkbox {
+  text-align: left;
+  font-size: 18px; }
+  .checkbox span {
+    display: inline-block;
+    padding-top: 5px; }
+
+@media (max-width: 1199px) {
+  .feedback h4 {
+    padding: 20px 17px;
+    font-size: 30px; }
+
+  .feedback .checkbox span {
+    display: inherit; }
+
   .feedback_wrap form {
     padding: 25px 25px 45px 25px; } }
+@media (max-width: 767px) {
+  .feedback h4 {
+    padding: 30px; }
+
+  .feedback_wrap form {
+    padding: 25px 25px 45px 25px; } }
+@media (max-width: 650px) {
+  .jq-checkbox.checked .jq-checkbox__div {
+    width: 14px;
+    height: 20px;
+    top: 7px;
+    left: 12px; }
+
+  .feedback h4 {
+    font-size: 30px;
+    padding: 20px 17px; }
+  .feedback_wrap {
+    border-radius: 0 0 70px 70px; }
+    .feedback_wrap form {
+      padding: 10px 35px 18px 35px; }
+      .feedback_wrap form input {
+        margin: 5px 0; }
+      .feedback_wrap form textarea {
+        height: 80px;
+        margin-top: 10px; }
+      .feedback_wrap form .checkbox {
+        margin-top: 10px;
+        font-size: 13px; }
+        .feedback_wrap form .checkbox span {
+          display: inherit;
+          padding-top: 2px; }
+      .feedback_wrap form button {
+        padding: 10px;
+        margin-top: 10px; } }
+@media (max-width: 480px) {
+  .feedback h4 {
+    font-size: 22px;
+    padding: 20px 17px; }
+  .feedback_wrap {
+    border-radius: 0 0 60px 60px; }
+    .feedback_wrap form {
+      padding: 10px 25px 18px 25px; }
+      .feedback_wrap form input {
+        margin: 5px 0;
+        font-size: 13px; }
+        .feedback_wrap form input::-webkit-input-placeholder {
+          font-size: 14px; }
+        .feedback_wrap form input:-ms-input-placeholder {
+          font-size: 14px; }
+        .feedback_wrap form input::placeholder {
+          font-size: 14px; }
+      .feedback_wrap form .jq-selectbox__select-text, .feedback_wrap form .jq-selectbox ul li {
+        font-size: 14px; }
+      .feedback_wrap form textarea {
+        height: 80px;
+        margin-top: 10px;
+        padding: 15px 30px;
+        font-size: 13px; }
+        .feedback_wrap form textarea::-webkit-input-placeholder {
+          font-size: 13px; }
+        .feedback_wrap form textarea:-ms-input-placeholder {
+          font-size: 13px; }
+        .feedback_wrap form textarea::placeholder {
+          font-size: 13px; }
+      .feedback_wrap form .checkbox {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: inherit; }
+      .feedback_wrap form button {
+        margin-top: 10px;
+        font-size: 16px; } }
 /* END FEEDBACK BLOCK */
 /* FOOTER BLOCK  */
 footer {
@@ -897,7 +1003,8 @@ footer {
   .footer_info h3 {
     margin: 0;
     padding: 0;
-    text-align: left; }
+    text-align: left;
+    line-height: 1; }
     .footer_info h3 a {
       font-size: 18px;
       color: #8ccc73;
@@ -906,16 +1013,20 @@ footer {
   .footer_info ul {
     padding: 0;
     margin: 0;
-    text-align: left; }
+    text-align: left;
+    display: inline-block; }
     .footer_info ul li {
-      list-style-type: none;
-      padding: 5px 30px;
-      background: url(../img/list_point_footer_ico.png) 0 10px no-repeat; }
+      list-style-image: url(../img/list_point_footer_ico.png); }
     .footer_info ul a {
       font-size: 16px;
       font-weight: 400;
       text-decoration: underline;
-      color: #8ccc73; }
+      color: #8ccc73;
+      display: inline-block;
+      vertical-align: super; }
+
+.footer_left h3 {
+  margin-bottom: 20px; }
 
 .footer_contacts {
   text-align: center; }
@@ -925,11 +1036,14 @@ footer {
     color: #fff;
     font-weight: 400;
     line-height: 35px; }
+    .footer_contacts a:hover {
+      color: #009524; }
   .footer_contacts .btn {
     font-size: 21px;
     padding: 5px 30px;
-    margin-top: 45px;
-    float: right; }
+    margin-top: 45px; }
+    .footer_contacts .btn:hover {
+      color: #fff; }
 
 .footer_top {
   display: inline-block;
@@ -940,6 +1054,8 @@ footer {
   padding-top: 35px;
   font-size: 18px;
   color: #fff; }
+  .footer_bottom .logo_wrap {
+    text-align: center; }
   .footer_bottom img {
     max-height: 63px;
     max-width: 100%;
@@ -951,14 +1067,17 @@ footer {
   .footer_contacts .btn {
     font-size: 16px; } }
 @media (max-width: 991px) {
-  .footer_info h3 {
-    font-size: 21px; }
-    .footer_info h3 a {
-      font-size: 16px; }
-  .footer_info ul li {
-    padding: 5px 20px; }
-    .footer_info ul li a {
-      font-size: 14px; }
+  .footer_info {
+    text-align: center; }
+    .footer_info h3 {
+      font-size: 21px; }
+      .footer_info h3 a {
+        font-size: 16px; }
+    .footer_info ul li {
+      list-style-image: none;
+      padding: 0 20px; }
+      .footer_info ul li a {
+        font-size: 14px; }
 
   .footer_contacts a {
     font-size: 18px; }
@@ -975,13 +1094,14 @@ footer {
   .footer_bottom img {
     margin-bottom: 0; } }
 @media (max-width: 767px) {
-  .footer_info h3 {
-    text-align: center;
-    margin: 5px 0; }
-  .footer_info ul {
-    text-align: center; }
-    .footer_info ul li {
-      background: none; }
+  .footer_info {
+    margin-top: 5px; }
+    .footer_info h3 {
+      text-align: center; }
+    .footer_info ul {
+      text-align: center; }
+      .footer_info ul li {
+        background: none; }
 
   .footer_contacts a {
     display: block; }
@@ -1030,59 +1150,58 @@ footer {
   top: 40px;
   text-align: center;
   display: none; }
-
-.feedback h4 {
-  font-size: 20px;
-  color: #fff; }
-.feedback_wrap {
-  border-radius: 0 0 90px 90px; }
-  .feedback_wrap form input {
-    padding: 5px 15px;
-    font-size: 16px; }
-    .feedback_wrap form input::-webkit-input-placeholder {
+  .mymagicoverbox_fenetre .feedback h4 {
+    font-size: 20px;
+    color: #fff; }
+  .mymagicoverbox_fenetre .feedback_wrap {
+    border-radius: 0 0 90px 90px; }
+    .mymagicoverbox_fenetre .feedback_wrap form input {
+      padding: 5px 15px;
       font-size: 16px; }
-    .feedback_wrap form input:-ms-input-placeholder {
+      .mymagicoverbox_fenetre .feedback_wrap form input::-webkit-input-placeholder {
+        font-size: 16px; }
+      .mymagicoverbox_fenetre .feedback_wrap form input:-ms-input-placeholder {
+        font-size: 16px; }
+      .mymagicoverbox_fenetre .feedback_wrap form input::placeholder {
+        font-size: 16px; }
+    .mymagicoverbox_fenetre .feedback_wrap form .jq-selectbox__select {
+      padding: 5px 15px;
+      text-align: left; }
+      .mymagicoverbox_fenetre .feedback_wrap form .jq-selectbox__select .jq-selectbox__dropdown {
+        width: 90%; }
+    .mymagicoverbox_fenetre .feedback_wrap form .jq-selectbox__dropdown {
+      left: 18px;
+      top: 33px; }
+    .mymagicoverbox_fenetre .feedback_wrap form .jq-selectbox__select-text {
       font-size: 16px; }
-    .feedback_wrap form input::placeholder {
+    .mymagicoverbox_fenetre .feedback_wrap form .jq-selectbox__select::after {
+      border-top: 9px solid #aaa;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent; }
+    .mymagicoverbox_fenetre .feedback_wrap form .jq-checkbox.checked .jq-checkbox__div {
+      width: 12px;
+      height: 17px;
+      top: 5px;
+      left: 9px; }
+    .mymagicoverbox_fenetre .feedback_wrap form textarea {
+      height: 120px;
       font-size: 16px; }
-  .feedback_wrap form .jq-selectbox__select {
-    padding: 5px 15px;
-    text-align: left; }
-    .feedback_wrap form .jq-selectbox__select .jq-selectbox__dropdown {
-      width: 90%; }
-  .feedback_wrap form .jq-selectbox__dropdown {
-    left: 18px;
-    top: 33px; }
-  .feedback_wrap form .jq-selectbox__select-text {
-    font-size: 16px; }
-  .feedback_wrap form .jq-selectbox__select::after {
-    border-top: 9px solid #aaa;
-    border-right: 10px solid transparent;
-    border-left: 10px solid transparent; }
-  .feedback_wrap form .jq-checkbox.checked .jq-checkbox__div {
-    width: 13px;
-    height: 18px;
-    top: 5px;
-    left: 9px; }
-  .feedback_wrap form textarea {
-    height: 120px;
-    font-size: 16px; }
-    .feedback_wrap form textarea::-webkit-input-placeholder {
-      font-size: 16px; }
-    .feedback_wrap form textarea:-ms-input-placeholder {
-      font-size: 16px; }
-    .feedback_wrap form textarea::placeholder {
-      font-size: 16px; }
-  .feedback_wrap form .jq-checkbox {
-    width: 32px;
-    height: 32px;
-    float: left; }
-  .feedback_wrap form .checkbox {
-    text-align: left;
-    font-size: 13px; }
-  .feedback_wrap form button {
-    font-size: 16px;
-    padding: 10px; }
+      .mymagicoverbox_fenetre .feedback_wrap form textarea::-webkit-input-placeholder {
+        font-size: 14px; }
+      .mymagicoverbox_fenetre .feedback_wrap form textarea:-ms-input-placeholder {
+        font-size: 14px; }
+      .mymagicoverbox_fenetre .feedback_wrap form textarea::placeholder {
+        font-size: 14px; }
+    .mymagicoverbox_fenetre .feedback_wrap form .jq-checkbox {
+      width: 32px;
+      height: 32px;
+      float: left; }
+    .mymagicoverbox_fenetre .feedback_wrap form .checkbox {
+      text-align: left;
+      font-size: 13px; }
+    .mymagicoverbox_fenetre .feedback_wrap form button {
+      font-size: 16px;
+      padding: 10px; }
 
 .mymagicoverbox_fenetreinterieur {
   height: 400px;
@@ -1103,6 +1222,11 @@ footer {
   right: 0;
   left: 0; }
 
+@media (max-height: 480px) {
+  .mymagicoverbox_fenetre {
+    height: 300px;
+    overflow: auto;
+    padding: 0 20px; } }
 @media (max-width: 767px) {
   .mymagicoverbox_fenetre {
     width: 600px;
@@ -1113,25 +1237,78 @@ footer {
     right: 0;
     top: 0; }
 
-  .feedback_wrap form .checkbox {
-    font-size: 13px; } }
-@media (max-width: 480px) {
+  .feedback_wrap form {
+    padding: 10px 25px 35px 25px; } }
+@media (max-width: 650px) {
   .mymagicoverbox_fenetre {
-    top: 60px;
-    width: 300px;
-    left: -150px; }
-
-  .feedback h4 {
-    font-size: 16px;
-    padding: 20px 17px; }
-  .feedback_wrap {
-    border-radius: 0 0 60px 60px; }
-    .feedback_wrap form {
-      padding: 10px 10px 35px 10px; }
-      .feedback_wrap form textarea {
-        height: 80px; }
-
+    width: 400px;
+    left: -200px;
+    top: 30px; }
+    .mymagicoverbox_fenetre .feedback h4 {
+      font-size: 16px;
+      padding: 20px 17px; }
+    .mymagicoverbox_fenetre .feedback_wrap {
+      border-radius: 0 0 70px 70px; }
+      .mymagicoverbox_fenetre .feedback_wrap form {
+        padding: 10px 35px 18px 35px; }
+        .mymagicoverbox_fenetre .feedback_wrap form input {
+          margin: 5px 0; }
+          .mymagicoverbox_fenetre .feedback_wrap form input .jq-checkbox {
+            width: 32px;
+            height: 32px; }
+        .mymagicoverbox_fenetre .feedback_wrap form textarea {
+          height: 80px;
+          margin-top: 10px; }
+        .mymagicoverbox_fenetre .feedback_wrap form .checkbox {
+          margin-top: 10px;
+          font-size: 13px; }
+        .mymagicoverbox_fenetre .feedback_wrap form button {
+          padding: 10px;
+          margin-top: 10px; } }
+@media (max-width: 480px) {
   #modal_close {
     right: 10px;
-    top: 0; } }
+    position: fixed;
+    top: 55px; }
+
+  .mymagicoverbox_fenetre {
+    top: 55px;
+    width: 300px;
+    left: -150px;
+    height: 100% !important; }
+    .mymagicoverbox_fenetre .feedback h4 {
+      font-size: 14px;
+      padding: 20px 17px; }
+    .mymagicoverbox_fenetre .feedback_wrap {
+      border-radius: 0 0 60px 60px; }
+      .mymagicoverbox_fenetre .feedback_wrap form {
+        padding: 10px 25px 18px 25px; }
+        .mymagicoverbox_fenetre .feedback_wrap form input {
+          margin: 5px 0;
+          font-size: 13px; }
+          .mymagicoverbox_fenetre .feedback_wrap form input::-webkit-input-placeholder {
+            font-size: 14px; }
+          .mymagicoverbox_fenetre .feedback_wrap form input:-ms-input-placeholder {
+            font-size: 14px; }
+          .mymagicoverbox_fenetre .feedback_wrap form input::placeholder {
+            font-size: 14px; }
+        .mymagicoverbox_fenetre .feedback_wrap form .jq-selectbox__select-text, .mymagicoverbox_fenetre .feedback_wrap form .jq-selectbox ul li {
+          font-size: 14px; }
+        .mymagicoverbox_fenetre .feedback_wrap form textarea {
+          height: 80px;
+          margin-top: 10px;
+          font-size: 13px; }
+          .mymagicoverbox_fenetre .feedback_wrap form textarea::-webkit-input-placeholder {
+            font-size: 13px; }
+          .mymagicoverbox_fenetre .feedback_wrap form textarea:-ms-input-placeholder {
+            font-size: 13px; }
+          .mymagicoverbox_fenetre .feedback_wrap form textarea::placeholder {
+            font-size: 13px; }
+        .mymagicoverbox_fenetre .feedback_wrap form .checkbox {
+          margin-top: 10px;
+          font-size: 13px;
+          line-height: inherit; }
+        .mymagicoverbox_fenetre .feedback_wrap form button {
+          margin-top: 10px;
+          font-size: 16px; } }
 /* END POP UP */
